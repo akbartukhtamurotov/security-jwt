@@ -1,6 +1,5 @@
 package com.example.security.security;
 
-import com.nimbusds.jose.JWSAlgorithm;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.oauth2.jose.jws.MacAlgorithm;
 import org.springframework.security.oauth2.jwt.*;
@@ -37,7 +36,7 @@ public class JwtService {
     }
 
     public Collection<? extends GrantedAuthority> extractAuthorities(String token) {
-        // todo: here you can place roles etc.
+        // TODO: Below you can place roles, authorities etc.
         return List.of();
     }
 }
