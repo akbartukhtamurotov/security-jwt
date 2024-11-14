@@ -16,6 +16,7 @@ public class LoginController {
 
     @PostMapping("/api/login")
     public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest request) {
+        // TODO: ⬇️ This type of checking is baaad, this is just for the sake of the example. Do your own implementation :)
         if ("admin".equals(request.username()) && "password".equals(request.password())) {
             String jwtToken = jwtService.generateToken(request.username());
             return new ResponseEntity<>(new LoginResponse(jwtToken), HttpStatus.OK);
