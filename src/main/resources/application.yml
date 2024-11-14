@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: security-demo
+
+jwt:
+  secret: mySuperSecretKeymySuperSecretKey
